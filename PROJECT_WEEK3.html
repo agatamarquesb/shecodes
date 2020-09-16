@@ -256,116 +256,62 @@
             font-size: 20px;
         }
         
-        ulList {
-            margin: 0;
-            padding: 0;
-        }
-        /* Style the list items */
-        
-        ulList li {
-            cursor: pointer;
-            position: relative;
-            padding: 12px 8px 12px 40px;
-            list-style-type: none;
-            background: #0f8d78;
-            font-size: 18px;
-            color: white;
-            font-family: 'Roboto', sans-serif;
-            transition: 0.2s;
-            /* make the list items unselectable */
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        /* Set all odd list items to a different color (zebra-stripes) */
-        
-        ulList li:nth-child(odd) {
-            background: #08DDB8;
-        }
-        /* Darker background-color on hover */
-        
-        ulList li:hover {
-            background: #885df1;
-        }
-        /* When clicked on, add a background color and strike out text */
-        
-        ulList li.checked {
-            background: #EF5F9A;
-            color: #fff;
-            text-decoration: line-through;
-        }
-        /* Add a "checked" mark when clicked on */
-        
-        ulList li.checked::before {
-            content: '';
-            position: absolute;
-            border-color: #fff;
-            border-style: solid;
-            border-width: 0 2px 2px 0;
-            top: 10px;
-            left: 16px;
-            transform: rotate(45deg);
-            height: 15px;
-            width: 7px;
-        }
-        /* Style the close button */
-        
-        .close {
-            position: absolute;
-            right: 0;
-            top: 0;
-            padding: 12px 16px 12px 16px;
+        .textdiary {
+            border: 4px solid #EF5F9A;
+            float: left;
+            margin-top: 40px;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            resize: none;
+            height: 200px;
         }
         
-        .close:hover {
-            background-color: black;
-            color: white;
+        .heightheight {
+            height: 300px;
+            justify-content: center;
+            display: flex;
         }
-        /* Style the header */
         
-        .header {
-            background-color: grey;
-            padding: 30px 40px;
-            color: white;
+        .textflex {
+            text-align: center;
+        }
+        
+        .textTitle {
+            font-size: 50px;
             text-align: center;
             font-family: 'Roboto', sans-serif;
+            color: #885df1;
+            margin-top: 80px;
+            margin-bottom: 0px;
+            margin-left: 25px;
+            padding: 14px 20px;
+            padding-right: 50px;
+            font-weight: bolder;
         }
-        /* Clear floats after the header */
         
-        .header:after {
-            content: "";
-            display: table;
-            clear: both;
+        .flexsubmt {
+            justify-content: center;
+            display: flex;
         }
-        /* Style the input */
         
-        input {
-            margin: 0;
-            border: 0;
-            border-radius: 0;
-            width: 75%;
-            padding: 10px;
-            float: left;
+        .input-submt {
+            border-radius: 30px;
             font-size: 16px;
-        }
-        /* Style the "Add" button */
-        
-        .addBtn {
-            padding: 10px;
-            width: 25%;
-            background: #d9d9d9;
-            color: #555;
-            float: left;
-            text-align: center;
-            font-size: 16px;
+            height: 50px;
+            width: 250px;
             cursor: pointer;
-            transition: 0.3s;
-            border-radius: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #885DF1;
+            border: 2px solid #885DF1;
+            box-shadow: 1px 1px 10px grey;
+            color: white;
+            font-weight: bold;
         }
         
-        .addBtn:hover {
-            background-color: #bbb;
+        .click {
+            text-decoration: none;
+            color: white
         }
     </style>
 </head>
@@ -375,10 +321,10 @@
     <div class="logobox bgnav">
         <img class="logo" src="C:\Users\agata\Downloads\youareunique_logo.png" alt="You Are UNIQUE" width="300px" />
         <ul>
-            <li><a class="liborderl" href="#homeall" id="home">Home</a></li>
-            <li><a href="#aboutus" id="about">About</a></li>
-            <li><a href="#mydiary">My Diary</a></li>
-            <li><a class="liborderr" href="#contact">Contact</a></li>
+            <li><a class="liborderl click" href="#homeall" id="home">Home</a></li>
+            <li><a class="click" href="#aboutus" id="about">About</a></li>
+            <li><a class="click" href="#mydiary">My Diary</a></li>
+            <li><a class="liborderr click" href="#contact">Contact</a></li>
         </ul>
         <button class="joinbutton">
             Join Now
@@ -392,8 +338,9 @@
                 to know yourself
             </p>
             <p class="content2">Self-love is the basis for all our happiness. When we love ourselves, we feel strength, even when everything seems to fall apart and life becomes full of meaning. </p>
-            <button class="startwriting"> <p>
+            <button class="startwriting"> <p> <a class="click" href="#startwriting" id="writing">
                 Start writing your feelings!
+                </a>
             </p>
             </button>
         </div>
@@ -419,21 +366,30 @@
         </div>
     </a>
     <div class="section-separator"></div>
-    <div id="myDIV" class="header">
-        <h2 style="margin:5px">My To Do List</h2>
-        <input type="text" id="myInput" placeholder="Title...">
-        <span onclick="newElement()" class="addBtn">Add</span>
+    <div>
+        <div class="textflex">
+            <p class="textTitle" id="startwriting">
+
+                How are you feeling today?🙇‍♀️</p>
+        </div>
+
+        <div>
+            <form action="C:\Users\agata\Downloads\codded by Ágata marques.jpg">
+                <div class="heightheight">
+                    <textarea class="textdiary" rows="15" cols="60" name="description">
+            </textarea>
+                </div>
+                <div class="flexsubmt">
+                    <input class="input-submt" id="submt" type="submit" value="SAVE MY TEXT" />
+                </div>
+            </form>
+        </div>
     </div>
 
-    <ul class="ullist ullist li" id="myUL">
-        <li>Drink water</li>
-        <li>Exercices</li>
-        <li>Read a book</li>
-        <li>Be Happy</li>
-    </ul>
+    <div class="section-separator"></div>
 
     <script>
-        const links = document.querySelectorAll("ul a");
+        const links = document.querySelectorAll(".click");
 
         for (const link of links) {
             link.addEventListener("click", clickHandler);
@@ -481,6 +437,13 @@
         }
         let joinNowButton = document.querySelector(".joinbutton");
         joinNowButton.addEventListener("click", joinNow);
+    </script>
+    <script>
+        function submitText() {
+            alert("Your text is well kept!🔒");
+        }
+        let submtNow = document.querySelector("#submt");
+        submtNow.addEventListener("click", submitText);
     </script>
 </body>
 
