@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homepage | YOU ARE UNIQUE</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+        body {
+            background-color: whitesmoke;
+            display: block;
+            margin: 0px;
+        }
+        
+        .bgnav {
+            background-color: #ef5f9a;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: auto;
+            margin-right: 20px;
+            padding: 0;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 200ms ease;
+            display: flex;
+            border-radius: 40px;
+        }
+        
+        li a {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            display: block;
+            padding: 14px 20px;
+            font-weight: bold;
+        }
+        
+        li a:hover {
+            background-color: #E391C4;
+            color: white;
+        }
+        
+        .liborderl {
+            border-radius: 40px 0px 0px 40px;
+        }
+        
+        .liborderr {
+            border-radius: 0px 40px 40px 0px;
+        }
+        
+        .joinbutton {
+            border-radius: 40px 40px;
+            display: flex;
+            margin: auto;
+            margin-left: 20px;
+            margin-right: 80px;
+            border: 2px solid #08DDB8;
+            background-color: #08DDB8;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 14px 20px;
+            transition: all 200ms ease;
+            cursor: pointer;
+            width: auto;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        button:hover {
+            background-color: #885df1;
+            color: white;
+            border: 2px solid #885df1;
+        }
+        
+        .logo {
+            padding: 25px 0;
+            float: left;
+            margin-top: 5;
+            margin-left: 80px;
+        }
+        
+        .logobox {
+            display: flex;
+        }
+        
+        .content {
+            font-size: 50px;
+            text-align: left;
+            font-family: 'Roboto', sans-serif;
+            color: #885df1;
+            margin-top: 70px;
+            margin-bottom: 0px;
+            padding: 14px 20px;
+            padding-left: 50px;
+            font-weight: bolder;
+        }
+        
+        .content2 {
+            font-size: 20px;
+            text-align: left;
+            font-family: 'Comfortaa', cursive;
+            color: #885df1;
+            margin-top: 5px;
+            padding: 4px 50px;
+        }
+        
+        .content3 {
+            font-size: 35px;
+            text-align: left;
+            font-family: 'Comfortaa', cursive;
+            color: #885df1;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            padding: 4px 50px;
+            font-weight: bolder;
+        }
+        
+        .content4 {
+            font-size: 25px;
+            text-align: left;
+            font-family: 'Comfortaa', cursive;
+            color: #885df1;
+            margin-top: 1px;
+            padding: 2px 50px;
+        }
+        
+        .outburst {
+            color: #ef5f9a;
+        }
+        
+        .divflex {
+            display: flex;
+        }
+        
+        .startwriting {
+            border-radius: 40px;
+            display: flex;
+            margin: auto;
+            margin-left: 50px;
+            margin-top: 35px;
+            border: 2px solid #08DDB8;
+            box-shadow: 1px 1px 10px grey;
+            background-color: #08DDB8;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 6px 25px;
+            transition: all 200ms ease;
+            cursor: pointer;
+            width: auto;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .startwriting:hover {
+            background-color: #EF5F9A;
+            color: white;
+            border: 2px solid #EF5F9A;
+        }
+        
+        .subimg {
+            float: right;
+            margin-right: 150px;
+            margin-top: 70px;
+            border-radius: 50%;
+            border: 15px;
+            padding: 6px;
+        }
+        
+        .aboutflex {
+            display: flex;
+        }
+        
+        .about {
+            font-size: 50px;
+            text-align: left;
+            font-family: 'Roboto', sans-serif;
+            color: #885df1;
+            margin-top: 80px;
+            margin-bottom: 0px;
+            margin-left: 25px;
+            padding: 14px 20px;
+            padding-right: 50px;
+            font-weight: bolder;
+        }
+        
+        .section-separator {
+            box-sizing: border-box;
+            margin: 10px 0;
+            width: 500px;
+            height: 105px;
+            background: transparent;
+            display: block;
+        }
+        
+        .feelings {
+            float: left;
+            margin-left: 110px;
+            margin-top: 40px;
+            border-radius: 8px;
+            border: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logobox bgnav">
+        <img class="logo" src="C:\Users\agata\Downloads\youareunique_logo.png" alt="You Are UNIQUE" width="300px" />
+        <ul>
+            <li><a class="liborderl" href="#home">Home</a></li>
+            <li><a href="#about" onclick="smoothScroll(document.getElementById('about'))">About</a></li>
+            <li><a href="#mydiary">My Diary</a></li>
+            <li><a class="liborderr" href="#contact">Contact</a></li>
+        </ul>
+        <button class="joinbutton">
+            Join Now
+          </button>
+    </div>
+    <div class="divflex">
+        <div>
+            <p class="content">
+                Learn how
+                </br>
+                to know yourself
+            </p>
+            <p class="content2">Self-love is the basis for all our happiness. When we love ourselves, we feel strength, even when everything seems to fall apart and life becomes full of meaning. </p>
+            <button class="startwriting"> <p>
+                Start writing your feelings!
+            </p>
+            </button>
+        </div>
+        <img class="subimg" src="C:\Users\agata\Downloads\ladyonmirron.png" alt="Self Love" width="400" />
+    </div>
+    <div class="section-separator">
+    </div>
+    <div class="aboutflex">
+        <div>
+            <img class="feelings" src="C:\Users\agata\Downloads\sentimentos.png" alt="feelings" width="400" /></div>
+        <div id="about">
+            <p class="about"> What we do?</p>
+            <p class="content3">We help people with <span style="background-color: #d2faf0">anxiety, depression and stress</span> to relax by writing their feelings.</p>
+            <p class="content4">
+                Write in your diary what you feel,
+                </br>what is wrong and your goals, make an <strong class="outburst">outburst!</strong>
+            </p>
+        </div>
+    </div>
+    <div class="section-separator"></div>
+    <script>
+        window.smoothScroll = function(target) {
+            var scrollContainer = target;
+            do { //find scroll container
+                scrollContainer = scrollContainer.parentNode;
+                if (!scrollContainer) return;
+                scrollContainer.scrollTop += 1;
+            } while (scrollContainer.scrollTop == 0);
+
+            var targetY = 0;
+            do { //find the top of target relatively to the container
+                if (target == scrollContainer) break;
+                targetY += target.offsetTop;
+            } while (target = target.offsetParent);
+
+            scroll = function(c, a, b, i) {
+                    i++;
+                    if (i > 30) return;
+                    c.scrollTop = a + (b - a) / 30 * i;
+                    setTimeout(function() {
+                        scroll(c, a, b, i);
+                    }, 20);
+                }
+                // start scrolling
+            scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+        }
+    </script>
+</body>
+
+</html>
