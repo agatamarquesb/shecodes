@@ -16,6 +16,11 @@
         
         .bgnav {
             background-color: #ef5f9a;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
         }
         
         ul {
@@ -93,7 +98,7 @@
             text-align: left;
             font-family: 'Roboto', sans-serif;
             color: #885df1;
-            margin-top: 70px;
+            margin-top: 160px;
             margin-bottom: 0px;
             padding: 14px 20px;
             padding-left: 50px;
@@ -165,7 +170,7 @@
         .subimg {
             float: right;
             margin-right: 150px;
-            margin-top: 70px;
+            margin-top: 160px;
             border-radius: 50%;
             border: 15px;
             padding: 6px;
@@ -206,6 +211,162 @@
             padding: 10px;
             box-sizing: border-box;
         }
+        
+        #button {
+            display: inline-block;
+            background-color: transparent;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            transition: background-color .3s, opacity .5s, visibility .5s;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+        
+        #button::after {
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 2em;
+            line-height: 50px;
+            color: #fff;
+        }
+        
+        #button:hover {
+            cursor: pointer;
+            background-color: #EF5F9A;
+        }
+        
+        #button:active {
+            background-color: #555;
+        }
+        
+        #button.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .hand {
+            padding-top: 12px;
+            font-size: 20px;
+        }
+        
+        ulList {
+            margin: 0;
+            padding: 0;
+        }
+        /* Style the list items */
+        
+        ulList li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            list-style-type: none;
+            background: #0f8d78;
+            font-size: 18px;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            transition: 0.2s;
+            /* make the list items unselectable */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        /* Set all odd list items to a different color (zebra-stripes) */
+        
+        ulList li:nth-child(odd) {
+            background: #08DDB8;
+        }
+        /* Darker background-color on hover */
+        
+        ulList li:hover {
+            background: #885df1;
+        }
+        /* When clicked on, add a background color and strike out text */
+        
+        ulList li.checked {
+            background: #EF5F9A;
+            color: #fff;
+            text-decoration: line-through;
+        }
+        /* Add a "checked" mark when clicked on */
+        
+        ulList li.checked::before {
+            content: '';
+            position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }
+        /* Style the close button */
+        
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px 12px 16px;
+        }
+        
+        .close:hover {
+            background-color: black;
+            color: white;
+        }
+        /* Style the header */
+        
+        .header {
+            background-color: grey;
+            padding: 30px 40px;
+            color: white;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        /* Clear floats after the header */
+        
+        .header:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Style the input */
+        
+        input {
+            margin: 0;
+            border: 0;
+            border-radius: 0;
+            width: 75%;
+            padding: 10px;
+            float: left;
+            font-size: 16px;
+        }
+        /* Style the "Add" button */
+        
+        .addBtn {
+            padding: 10px;
+            width: 25%;
+            background: #d9d9d9;
+            color: #555;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0;
+        }
+        
+        .addBtn:hover {
+            background-color: #bbb;
+        }
     </style>
 </head>
 
@@ -214,8 +375,8 @@
     <div class="logobox bgnav">
         <img class="logo" src="C:\Users\agata\Downloads\youareunique_logo.png" alt="You Are UNIQUE" width="300px" />
         <ul>
-            <li><a class="liborderl" href="#home">Home</a></li>
-            <li><a href="#about" onclick="smoothScroll(document.getElementById('about'))">About</a></li>
+            <li><a class="liborderl" href="#homeall" id="home">Home</a></li>
+            <li><a href="#aboutus" id="about">About</a></li>
             <li><a href="#mydiary">My Diary</a></li>
             <li><a class="liborderr" href="#contact">Contact</a></li>
         </ul>
@@ -223,7 +384,7 @@
             Join Now
           </button>
     </div>
-    <div class="divflex">
+    <div id="homeall" class="divflex">
         <div>
             <p class="content">
                 Learn how
@@ -240,10 +401,10 @@
     </div>
     <div class="section-separator">
     </div>
-    <div class="aboutflex">
+    <div id="aboutus" class="aboutflex">
         <div>
             <img class="feelings" src="C:\Users\agata\Downloads\sentimentos.png" alt="feelings" width="400" /></div>
-        <div id="about">
+        <div>
             <p class="about"> What we do?</p>
             <p class="content3">We help people with <span style="background-color: #d2faf0">anxiety, depression and stress</span> to relax by writing their feelings.</p>
             <p class="content4">
@@ -252,33 +413,74 @@
             </p>
         </div>
     </div>
+    <a id="button">
+        <div class="hand">👆
+
+        </div>
+    </a>
     <div class="section-separator"></div>
+    <div id="myDIV" class="header">
+        <h2 style="margin:5px">My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+    <ul class="ullist ullist li" id="myUL">
+        <li>Drink water</li>
+        <li>Exercices</li>
+        <li>Read a book</li>
+        <li>Be Happy</li>
+    </ul>
+
     <script>
-        window.smoothScroll = function(target) {
-            var scrollContainer = target;
-            do { //find scroll container
-                scrollContainer = scrollContainer.parentNode;
-                if (!scrollContainer) return;
-                scrollContainer.scrollTop += 1;
-            } while (scrollContainer.scrollTop == 0);
+        const links = document.querySelectorAll("ul a");
 
-            var targetY = 0;
-            do { //find the top of target relatively to the container
-                if (target == scrollContainer) break;
-                targetY += target.offsetTop;
-            } while (target = target.offsetParent);
-
-            scroll = function(c, a, b, i) {
-                    i++;
-                    if (i > 30) return;
-                    c.scrollTop = a + (b - a) / 30 * i;
-                    setTimeout(function() {
-                        scroll(c, a, b, i);
-                    }, 20);
-                }
-                // start scrolling
-            scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+        for (const link of links) {
+            link.addEventListener("click", clickHandler);
         }
+
+        function clickHandler(e) {
+            e.preventDefault();
+            const href = this.getAttribute("href");
+            const offsetTop = document.querySelector(href).offsetTop;
+
+            scroll({
+                top: offsetTop,
+                behavior: "smooth"
+            });
+        }
+    </script>
+    <script>
+        const btn = document.querySelector('#button');
+        window.addEventListener("scroll", scrollCallback);
+
+        function scrollCallback() {
+            console.log(window.scrollY)
+            if (window.scrollY > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        }
+        btn.addEventListener("click", clickHandler);
+
+        function clickHandler(e) {
+            e.preventDefault();
+            scroll({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+    <script>
+        function joinNow() {
+            let name = prompt("What's your first name?");
+            let age = prompt("How old are you?");
+            let email = prompt("What is your email?")
+            alert("Welcome, " + name + "!");
+        }
+        let joinNowButton = document.querySelector(".joinbutton");
+        joinNowButton.addEventListener("click", joinNow);
     </script>
 </body>
 
